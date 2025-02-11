@@ -1,15 +1,15 @@
 import Navbar from "../components/navbar/Navbar";
 import Footer from "../components/footer/Footer";
-import TradeYeildContent from "../components/trade-yeild/TradeYeildContent";
+import TradeYieldContent from "../components/trade-yield/TradeYieldContent";
 
-const TradeYeilds = () => {
+const TradeYields = () => {
   return (
     <>
       <Navbar />
-      <TradeYeildContent />
+      <TradeYieldContent />
       <Footer />
     </>
   );
 };
 
-export default TradeYeilds;
+export default TradeYields;

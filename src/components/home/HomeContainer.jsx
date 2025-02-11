@@ -14,7 +14,7 @@ const HomeContainer = () => {
     {
       id: 2,
       imgSrc: YTImage,
-      alt: "Yeild Trading Image",
+      alt: "Yield Trading Image",
     },
     {
       id: 3,

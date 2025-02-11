@@ -15,7 +15,12 @@ const LimitAvailableTrade = () => {
       {/* Trade APY Box */}
       <div className="w-full h-[30px] px-2 flex items-center justify-between gap-4 border rounded shadow-cardShadow border-borderColor border-opacity-40 mt-2">
         {/* left */}
-        <p className="text-xs text-white">Trade APY</p>
+        {/* <p className="text-xs text-white">Trade APY</p> */}
+        <input
+          type="text"
+          placeholder="Trade APY"  // Default text when input is empty
+          className="text-xs text-white bg-transparent border-none outline-none w-full"
+        />
 
         {/* right */}
         <div className="flex items-center justify-center gap-6">
@@ -25,14 +30,16 @@ const LimitAvailableTrade = () => {
       </div>
 
       {/* Size */}
-      <div className="w-full h-[30px] px-2 flex items-center justify-between gap-4 border rounded shadow-cardShadow border-borderColor border-opacity-40 mt-4">
-        {/* left */}
-        <p className="text-xs text-white">Size</p>
+      <div className="w-full h-[30px] px-2 flex items-center justify-between gap-4 border rounded shadow-cardShadow border-borderColor border-opacity-40 mt-2">
+        {/* Left side: Label */}
+        <input
+          type="text"
+          placeholder="Size"  // Default text when input is empty
+          className="text-xs text-white bg-transparent border-none outline-none w-full"
+        />
 
-        {/* right */}
-        <div className="flex items-center justify-center gap-6">
-          <p className="text-xs text-white">YT SSUI</p>
-        </div>
+        {/* Right side: Currency */}
+        <p className="text-xs text-white">YT SSUI</p>
       </div>
     </>
   );

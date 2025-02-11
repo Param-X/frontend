@@ -5,7 +5,7 @@ import '@suiet/wallet-kit/style.css';
 import App from "./App.jsx";
 import "./index.css";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import TradeYeilds from "./pages/TradeYeilds.jsx";
+import TradeYields from "./pages/TradeYields.jsx";
 import Positions from "./pages/Positions.jsx";
 
 
@@ -15,8 +15,8 @@ const router = createBrowserRouter([
     element: <App />,
   },
   {
-    path: "/trade-yeild",
-    element: <TradeYeilds />,
+    path: "/trade-yield",
+    element: <TradeYields />,
   },
   {
     path: "/fixed-income",

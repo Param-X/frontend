@@ -3,7 +3,7 @@ import TradeBuySellBox from "./TradeBuySellBox";
 import TradeMonitor from "./TradeMonitor";
 import TradeOrderBook from "./TradeOrderBook";
 
-const TradeYeildContent = () => {
+const TradeYieldContent = () => {
   return (
     <div className="w-full bg-black screen-height">
       {/* Wrapper Start */}
@@ -34,4 +34,4 @@ const TradeYeildContent = () => {
   );
 };
 
-export default TradeYeildContent;
+export default TradeYieldContent;

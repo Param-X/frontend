@@ -12,14 +12,18 @@ const AvailableToTrade = () => {
         </div>
       </div>
 
-      {/* Size Box */}
       <div className="w-full h-[30px] px-2 flex items-center justify-between gap-4 border rounded shadow-cardShadow border-borderColor border-opacity-40 mt-2">
-        {/* left */}
-        <p className="text-xs text-white">Size</p>
+        {/* Left side: Label */}
+        <input
+          type="text"
+          placeholder="Size"  // Default text when input is empty
+          className="text-xs text-white bg-transparent border-none outline-none w-full"
+        />
 
-        {/* right */}
+        {/* Right side: Currency */}
         <p className="text-xs text-white">SSUI</p>
       </div>
+
     </>
   );
 };

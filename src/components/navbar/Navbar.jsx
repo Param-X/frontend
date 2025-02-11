@@ -7,8 +7,8 @@ const Navbar = () => {
   const navLinks = [
     {
       id: 1,
-      target: "/trade-yeild",
-      text: "Trade Yeild",
+      target: "/trade-yield",
+      text: "Trade Yield",
     },
     {
       id: 2,
