@@ -18,7 +18,7 @@ const TradeMonitorHeading = () => {
         <div className="flex items-center gap-2">
           <img src={SuiIcon} alt="sui__icon" />
           <p className="text-sm text-white">Spring Staked SUI</p>
-          <BsCaretDown color="#fff" />
+          {/* <BsCaretDown color="#fff" /> */}
         </div>
 
         {/* Right */}

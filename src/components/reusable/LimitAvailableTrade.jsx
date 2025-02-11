@@ -1,8 +1,28 @@
+import { useState } from "react";
+
 const LimitAvailableTrade = () => {
+  const [tradeAPY, setTradeAPY] = useState("");
+
+  const handleInputChange = (e) => {
+    let value = e.target.value.replace(/[^0-9.]/g, ""); // Remove non-numeric & non-dot chars
+    value = value.replace(/^(\d*\.?\d*).*$/, "$1"); // Allow only one decimal point
+    if (value) {
+      setTradeAPY(value + "%");
+    } else {
+      setTradeAPY("");
+    }
+  };
+
+  const generateRandomAPY = () => {
+    const base = 2.39;
+    const randomDecimal = (Math.random() * 0.01).toFixed(4); // Small variation
+    setTradeAPY(`${(base + parseFloat(randomDecimal)).toFixed(4)}%`);
+  };
+
   return (
     <>
       <div className="flex items-center justify-between w-full gap-4 pt-4 pr-4">
-        {/* left */}
+        {/* Left */}
         <p className="text-white text-tenPixel">Available To Trade</p>
 
         {/* Right */}
@@ -12,34 +32,40 @@ const LimitAvailableTrade = () => {
         </div>
       </div>
 
-      {/* Trade APY Box */}
-      <div className="w-full h-[30px] px-2 flex items-center justify-between gap-4 border rounded shadow-cardShadow border-borderColor border-opacity-40 mt-2">
-        {/* left */}
-        {/* <p className="text-xs text-white">Trade APY</p> */}
+      {/* Yield APY Box */}
+      <div className="w-full h-[30px] px-2 flex items-center justify-between gap-4 border rounded shadow-cardShadow border-borderColor border-opacity-40 mt-2 relative">
+        {/* Left: Label */}
+        <p className="text-xs text-white w-full">Yield APY</p>
+
+        {/* Input Field */}
         <input
           type="text"
-          placeholder="Trade APY"  // Default text when input is empty
-          className="text-xs text-white bg-transparent border-none outline-none w-full"
+          value={tradeAPY}
+          onChange={handleInputChange}
+          placeholder="3.927"
+          className="text-xs text-white text-right bg-transparent border-none outline-none w-full"
         />
 
-        {/* right */}
-        <div className="flex items-center justify-center gap-6">
-          <p className="text-xs text-white">2.3923%</p>
-          <p className="text-[8px] text-white pt-1.5">Mid</p>
-        </div>
+        {/* Button to Set APY */}
+        <button
+          onClick={generateRandomAPY}
+          className="text-[10px] text-white pt-0.5 pr-1.5 bg-themeBlue px-2 pl-0.5 pr-1 rounded hover:bg-gray-600 transition"
+        >
+          Mid
+        </button>
       </div>
 
       {/* Size */}
       <div className="w-full h-[30px] px-2 flex items-center justify-between gap-4 border rounded shadow-cardShadow border-borderColor border-opacity-40 mt-2">
-        {/* Left side: Label */}
+        {/* Left: Input */}
         <input
           type="text"
-          placeholder="Size"  // Default text when input is empty
+          placeholder="Size"
           className="text-xs text-white bg-transparent border-none outline-none w-full"
         />
 
-        {/* Right side: Currency */}
-        <p className="text-xs text-white">YT SSUI</p>
+        {/* Right: Currency */}
+        <p className="text-xs text-white w-[60px]">YT SSUI</p>
       </div>
     </>
   );
